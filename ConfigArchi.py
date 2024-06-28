@@ -2,12 +2,6 @@ from tkinter import *
 from tkinter import filedialog
 import pandas as pd
 
-def configuracion_mid(ventmid):
-    ventmid.config(bg="white")
-    ventmid.config(width="900", height="900")
-    ventmid.pack()
-    return ventmid
-
 def seleccionar_archivo(etiqueta):
     ruta = filedialog.askopenfilename(title="Seleccionar Archivo", filetypes=[("CSV files", "*.csv")])
     if ruta:
