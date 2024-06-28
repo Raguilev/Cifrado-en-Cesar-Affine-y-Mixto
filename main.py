@@ -1,6 +1,5 @@
 from ConfigVisual import *
 
-
 class ventanas:
     def __init__(self, root):
         self.root = root
@@ -9,7 +8,7 @@ class ventanas:
         self.root.iconbitmap("Images/estrella.ico") 
         self.root.geometry("1280x720")
         
-      
+
         self.cargar_imagen_fondo("Images/universidad.png")  
 
         self.ventmid = Frame(self.root)
@@ -26,7 +25,6 @@ class ventanas:
         ventmid.config(width=900, height=900)
         ventmid.place(relx=0.5, rely=0.5, anchor=CENTER)
      
-
 if __name__ == "__main__":
     root = Tk()
     app = ventanas(root)

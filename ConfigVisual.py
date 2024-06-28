@@ -1,6 +1,6 @@
 from ConfigArchi import *
 from ConfigCifra import *
-from tkinter import Tk, Label, Button, OptionMenu, StringVar
+from tkinter import Label, Button, OptionMenu, StringVar
 
 def configurar_botones(ventmid):
     etiqueta_archivo = Label(ventmid, text="No se ha seleccionado ningún archivo.")

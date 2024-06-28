@@ -1,4 +1,11 @@
-# Esto fue hecho por raul y andré
+# Se crea la funcion mapeo en reemplazo a la función nativa "map" de Python
+def mapeo(funcionalidad, iteracion): 
+    resultados = [] 
+    for item in iteracion:
+        resultados.append(funcionalidad(item))
+    return resultados
+
+# Cifrados
 def cifrado_cesar(texto, desplazamiento=3):
     def cifrar_caracter(char):
         if char.isupper(): 
@@ -8,7 +15,7 @@ def cifrado_cesar(texto, desplazamiento=3):
         else:
             return char
 
-    return ''.join(map(cifrar_caracter, texto))
+    return ''.join(mapeo(cifrar_caracter, texto))
 
 def cifrado_affine(texto, a=5, b=8):
     m = 26
@@ -21,7 +28,7 @@ def cifrado_affine(texto, a=5, b=8):
         else:
             return char
 
-    return ''.join(map(cifrar_caracter, texto))
+    return ''.join(mapeo(cifrar_caracter, texto))
 
 def cifrado_mixto(texto):
     return cifrado_affine(cifrado_cesar(texto))
